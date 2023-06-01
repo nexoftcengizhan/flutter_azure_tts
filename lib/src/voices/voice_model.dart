@@ -36,6 +36,8 @@ class Voice extends Equatable {
     required this.status,
   });
 
+  static String voiceStyle = 'default';
+
   factory Voice.fromJson(Map<String, dynamic> json) => _$VoiceFromJson(json);
 
   Map<String, dynamic> toJson() => _$VoiceToJson(this);

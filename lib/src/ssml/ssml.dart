@@ -14,6 +14,7 @@ class Ssml {
         "<voice xml:lang='${voice.locale}' "
         "xml:gender='${voice.gender}' "
         "name='${voice.shortName}'>"
+        "<mstts:express-as style='${Voice.voiceStyle}'>"
         "<prosody rate='$speed'>"
         "$text"
         "<\/prosody><\/voice><\/speak>";
