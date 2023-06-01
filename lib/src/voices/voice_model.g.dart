@@ -17,6 +17,7 @@ Voice _$VoiceFromJson(Map<String, dynamic> json) {
     sampleRateHertz: json['SampleRateHertz'] as String,
     voiceType: json['VoiceType'] as String,
     status: json['Status'] as String,
+    style: json['Style'] as String,
   );
 }
 
@@ -30,4 +31,5 @@ Map<String, dynamic> _$VoiceToJson(Voice instance) => <String, dynamic>{
       'SampleRateHertz': instance.sampleRateHertz,
       'VoiceType': instance.voiceType,
       'Status': instance.status,
+      'Style': instance.style,
     };

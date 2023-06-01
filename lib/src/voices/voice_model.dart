@@ -23,17 +23,21 @@ class Voice extends Equatable {
   final String voiceType;
   @JsonKey(name: "Status")
   final String status;
+  @JsonKey(name: "Style")
+  final String style;
 
-  Voice(
-      {required this.name,
-      required this.displayName,
-      required this.localName,
-      required this.shortName,
-      required this.gender,
-      required this.locale,
-      required this.sampleRateHertz,
-      required this.voiceType,
-      required this.status});
+  Voice({
+    required this.name,
+    required this.displayName,
+    required this.localName,
+    required this.shortName,
+    required this.gender,
+    required this.locale,
+    required this.sampleRateHertz,
+    required this.voiceType,
+    required this.status,
+    required this.style,
+  });
 
   factory Voice.fromJson(Map<String, dynamic> json) => _$VoiceFromJson(json);
 
@@ -49,6 +53,7 @@ class Voice extends Equatable {
         locale,
         sampleRateHertz,
         voiceType,
-        status
+        status,
+        style,
       ];
 }
