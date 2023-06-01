@@ -13,10 +13,12 @@ class Ssml {
         "xml:lang='${voice.locale}'>"
         "<voice xml:lang='${voice.locale}' "
         "xml:gender='${voice.gender}' "
-        "name='${voice.shortName}'>"
-        "<mstts:express-as style='${Voice.voiceStyle}'>"
+        "name='${voice.shortName}' "
+        "xmlns:mstts='http://www.w3.org/2001/mstts'>"
         "<prosody rate='$speed'>"
+        "<mstts:express-as style='${Voice.voiceStyle}'> "
         "$text"
+        "<\/mstts:express-as>"
         "<\/prosody><\/voice><\/speak>";
   }
 }
